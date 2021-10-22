@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.app {
+  position: relative;
+  padding: 10px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+button:active {
+  background-color: lightcoral;
+}
+.movieList {
+  display: flex;
+  flex-direction: column;
+}
+.movie {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.addMov {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+#newMovieName {
+  width: 100vw;
+}
