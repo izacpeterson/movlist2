@@ -30,7 +30,6 @@ app.get("/api/getmovies", (req, res) => {
 
   let userModel = mongoose.model("model", movieSchema);
   userModel.findOne({ user: userEmail }, (err, user) => {
-    console.log(user);
     res.json({ email: userEmail, movies: user.movies });
   });
 });

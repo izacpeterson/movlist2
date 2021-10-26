@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
 }
 html,
 body {
@@ -9,31 +13,41 @@ body {
 }
 .app {
   position: relative;
-  padding: 10px;
   padding-bottom: 50px;
 }
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px rgb(197, 197, 197);
+  padding: 5px;
 }
 button {
-  background-color: cornflowerblue;
   border: none;
-  color: white;
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 button:active {
-  background-color: lightcoral;
+  background-color: #5100bb;
 }
 .movieList {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 .movie {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.movie button {
+  background-color: #5100bb;
+  color: white;
+  box-shadow: 1px 1px 5px grey;
 }
 .addMov {
   position: fixed;
@@ -41,8 +55,15 @@ button:active {
   bottom: 0;
   display: flex;
   width: 100vw;
-  justify-content: center;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 5px;
+}
+.addMov * {
+  margin: 0 5px;
 }
 #newMovieName {
   width: 100vw;
+  padding-left: 30px;
+  border: none;
 }

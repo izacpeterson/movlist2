@@ -5,7 +5,6 @@ Vue.component("pageheader", {
   <header>
     <h1>Movie List</h1>
     <h2>{{user}}</h2>
-    <button>Account</button>
   </header>`,
 });
 
@@ -15,7 +14,7 @@ Vue.component("movielist", {
     user: { type: String, required: true },
     movies: { type: Array, required: true },
   },
-  template: `<ul class="movieList"><li v-for="movie in movies" class="movie"><h2 class="movieName">{{movie}}</h2><button class="delete" v-on:click="deleteMovie(movie)">Del</button></li></ul>`,
+  template: `<ul class="movieList"><li v-for="movie in movies" class="movie"><h2 class="movieName">{{movie}}</h2><button class="delete" v-on:click="deleteMovie(movie)"><span class="material-icons"> delete_outline </span></button></li></ul>`,
 
   methods: {
     deleteMovie(movietitle) {
@@ -46,7 +45,7 @@ Vue.component("addmovie", {
   props: {
     user: { type: String, required: true },
   },
-  template: `<div class="addMov"><input v-model="movieTitle" id="newMovieName" placeholder="Movie Name"><button @click="submit">Add</button></div>`,
+  template: `<div class="addMov"><input v-model="movieTitle" id="newMovieName" placeholder="Movie Name" type="text"><button @click="submit"><span class="material-icons">add</span></button></div>`,
   data() {
     return {
       movieTitle: "",
