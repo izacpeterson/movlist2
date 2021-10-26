@@ -10,6 +10,7 @@ body {
 .app {
   position: relative;
   padding: 10px;
+  padding-bottom: 50px;
 }
 header {
   display: flex;
