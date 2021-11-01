@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 3300;
 
 //MONGO
 var mongoose = require("mongoose");
@@ -75,5 +75,5 @@ app.post("/api/deletemovie", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("server listening on 5500");
+  console.log("server listening on " + PORT);
 });
